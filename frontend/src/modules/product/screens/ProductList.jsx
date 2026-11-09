@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingBag, Search, Plus, PackagePlus, Pencil, Trash2 } from "lucide-react";
-import { getAllProducts, deleteProduct } from "../api/productApi";
+import { getAllProducts, deleteProduct } from "../../../api/productApi";
 import "./ProductList.css";
 
 export default function ProductList() {

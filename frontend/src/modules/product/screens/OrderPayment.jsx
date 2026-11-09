@@ -16,7 +16,7 @@ import {
   Printer,
   ShoppingBag,
 } from "lucide-react";
-import { getPurchaseOrderById, payPurchaseOrder } from "../api/productApi";
+import { getPurchaseOrderById, payPurchaseOrder } from "../../../api/productApi";
 import "./OrderPayment.css";
 
 export default function OrderPayment() {

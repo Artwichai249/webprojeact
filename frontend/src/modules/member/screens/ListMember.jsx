@@ -1,7 +1,7 @@
 // src/modules/member/screens/ListMember.jsx
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { getMembers, deleteMember } from "../api/memberAPI";
+import { getMembers, deleteMember } from "../../../api/memberAPI";
 import {
   getMemberLoyaltyDetails,
   adjustMemberPoints,

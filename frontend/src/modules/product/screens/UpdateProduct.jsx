@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Edit3, Save, X } from "lucide-react";
-import { getProductById, updateProduct } from "../api/productApi";
+import { getProductById, updateProduct } from "../../../api/productApi";
 import "./UpdateProduct.css";
 
 export default function UpdateProduct() {

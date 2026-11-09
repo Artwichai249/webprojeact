@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserPlus, RotateCcw } from "lucide-react";
-import { createMember } from "../api/memberAPI";
+import { createMember } from "../../../api/memberAPI";
 import "./Register.css";
 
 export default function Register() {

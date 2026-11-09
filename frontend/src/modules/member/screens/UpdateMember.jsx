@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Save, X, Edit3, ShieldAlert, Lock, UserCheck } from "lucide-react";
-import { getMemberById, updateMember } from "../api/memberAPI";
+import { getMemberById, updateMember } from "../../../api/memberAPI";
 import { useAuth } from "../../auth/AuthContext";
 import "./UpdateMember.css";
 

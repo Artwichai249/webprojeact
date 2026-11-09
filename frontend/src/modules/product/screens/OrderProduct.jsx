@@ -33,7 +33,7 @@ import {
   getPurchaseOrders,
   approvePurchaseOrder,
   deletePurchaseOrder,
-} from "../api/productApi";
+} from "../../../api/productApi";
 import { useAuth } from "../../auth/AuthContext";
 import "./OrderProduct.css";
 
