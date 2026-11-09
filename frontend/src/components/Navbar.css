@@ -1,0 +1,199 @@
+/* src/components/Navbar.css */
+.mainNavbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  margin-bottom: 28px;
+}
+
+.navbarContainer {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #0f172a;
+}
+
+.navbarBrandIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
+}
+
+.navbarBrandTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.navbarBrandSubtitle {
+  font-size: 11px;
+  color: #64748b;
+  display: block;
+}
+
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f1f5f9;
+  padding: 4px;
+  border-radius: 12px;
+}
+
+.navItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #64748b;
+  transition: all 0.2s ease-in-out;
+}
+
+.navItem:hover {
+  color: #0f172a;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.navItem.active {
+  background-color: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.navItem.member.active {
+  color: #0d9488;
+}
+
+.navItem.product.active {
+  color: #16a34a;
+}
+
+.navItem.sales.active {
+  color: #0284c7;
+}
+
+.navItem.shop.active {
+  color: #2563eb;
+}
+
+.navItem.finance.active {
+  color: #6366f1;
+}
+
+.navItemBadge {
+  font-size: 11px;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  color: #475569;
+  font-weight: 500;
+}
+
+.navItem.active .navItemBadge {
+  background-color: #ecfdf5;
+  color: #059669;
+}
+
+/* ===== ผู้ใช้ที่เข้าสู่ระบบ + ปุ่มออกจากระบบ ===== */
+.navbarUser {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbarAvatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
+  text-transform: uppercase;
+}
+
+.navbarUserInfo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.navbarUserName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.navbarUserHandle {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.navbarProfileBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #bfdbfe;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbarProfileBtn:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+}
+
+.navbarLogout {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  background-color: #fff1f2;
+  color: #e11d48;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbarLogout:hover {
+  background-color: #e11d48;
+  border-color: #e11d48;
+  color: #fff;
+}

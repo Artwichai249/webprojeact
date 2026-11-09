@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded App Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  
+  <!-- Store Front / Shopping Bag Icon -->
+  <g fill="none" stroke="#ffffff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round" transform="translate(40, 40)">
+    <path d="M 56 160 L 216 64 L 376 160 Z" fill="#ffffff" fill-opacity="0.15"/>
+    <path d="M 56 160 L 376 160"/>
+    <rect x="80" y="160" width="272" height="200" rx="20" fill="#ffffff" fill-opacity="0.08"/>
+    <line x1="140" y1="160" x2="140" y2="360"/>
+    <line x1="216" y1="160" x2="216" y2="360"/>
+    <line x1="292" y1="160" x2="292" y2="360"/>
+    <rect x="40" y="360" width="352" height="24" rx="12" fill="#ffffff"/>
+  </g>
+  <circle cx="390" cy="120" r="44" fill="#fbbf24"/>
+  <path d="M 390 98 L 396 112 L 412 114 L 400 125 L 403 140 L 390 132 L 377 140 L 380 125 L 368 114 L 384 112 Z" fill="#b45309"/>
+</svg>

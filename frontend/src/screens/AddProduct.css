@@ -1,0 +1,87 @@
+/* src/screens/AddProduct.css */
+.addProductPage {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.addProductCard {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.addProductCard h2 {
+  margin: 0 0 20px;
+  color: #334155;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.addProductForm label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.addProductForm input,
+.addProductForm select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.addProductForm input:focus,
+.addProductForm select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.15);
+}
+
+.addProductButtonGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btnSaveProduct,
+.btnCancelProduct {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnSaveProduct {
+  background-color: #16a34a;
+  color: white;
+}
+
+.btnSaveProduct:hover {
+  background-color: #15803d;
+}
+
+.btnCancelProduct {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.btnCancelProduct:hover {
+  background-color: #e2e8f0;
+}

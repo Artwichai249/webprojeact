@@ -1,0 +1,761 @@
+/* src/modules/product/screens/OrderPayment.css */
+
+.paymentPageContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+.paymentHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.btnBackOrder {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  width: fit-content;
+  padding: 6px 12px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btnBackOrder:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.paymentBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.paymentHeaderInfo h1 {
+  margin: 6px 0 4px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.paymentSubtitle {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Loading & Error */
+.paymentLoadingCard,
+.paymentErrorCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 60px 24px;
+  text-align: center;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.spinningIcon {
+  color: #2563eb;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Grid Layout */
+.paymentMainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 900px) {
+  .paymentMainGrid {
+    grid-template-columns: 380px 1fr;
+  }
+}
+
+.panelCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.panelHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fafaf9;
+}
+
+.panelHead h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.textBlue {
+  color: #2563eb;
+}
+
+.textEmerald {
+  color: #059669;
+}
+
+/* Left Panel: Order Detail */
+.orderDetailBox {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.orderItemMain {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.itemIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemCode {
+  font-size: 11px;
+  font-weight: 700;
+  background: #e2e8f0;
+  color: #334155;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.itemName {
+  margin: 4px 0 2px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.itemCategory {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.orderSummaryLines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.summaryLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lineLabel {
+  color: #64748b;
+}
+
+.lineVal {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.fontBold {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.statusPill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.statusPill.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.statusPill.approved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.totalDueBanner {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+.dueLabel {
+  font-size: 12px;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+
+.dueAmount {
+  font-size: 28px;
+  font-weight: 800;
+  color: #34d399;
+}
+
+/* Right Panel: Payment Tabs & Form */
+.paymentMethodTabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #f1f5f9;
+  padding: 6px;
+  gap: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.methodTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.methodTab:hover {
+  color: #0f172a;
+}
+
+.methodTab.active {
+  background: #ffffff;
+  color: #059669;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.paymentForm {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Method: QR PromptPay */
+.qrContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.qrFrame {
+  background: #ffffff;
+  border: 2px solid #003b70;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 59, 112, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qrHeaderLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.qrHeaderLogo span {
+  font-size: 14px;
+  font-weight: 800;
+  color: #003b70;
+}
+
+.qrHeaderLogo small {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.qrCanvasPlaceholder {
+  padding: 8px;
+  background: #ffffff;
+}
+
+.qrFooterAmount {
+  display: flex;
+  gap: 6px;
+  font-size: 13px;
+  color: #003b70;
+  padding-top: 6px;
+  border-top: 1px dashed #cbd5e1;
+  width: 100%;
+  justify-content: center;
+}
+
+.qrHelpText {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Method: Bank Transfer */
+.bankContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bankAccountCard {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.bankLogo {
+  width: 54px;
+  height: 54px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.bankLogo.kbank {
+  background: #138f2d;
+}
+
+.bankLogo.scb {
+  background: #4e2a84;
+}
+
+.bankDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bankName {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.accountNumber {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: 0.03em;
+}
+
+.accountHolder {
+  font-size: 12px;
+  color: #334155;
+}
+
+/* Method: Cash */
+.cashContent {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.cashInputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cashInputGroup label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.cashInputWrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cashNumberInput {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.cashNumberInput:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15);
+}
+
+.btnExactCash {
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  background: #e2e8f0;
+  color: #1e293b;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnExactCash:hover {
+  background: #cbd5e1;
+}
+
+.cashChangeBox {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.changeLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.changeLine.totalChange {
+  padding-top: 8px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.changeOk {
+  color: #059669;
+}
+
+.changeShort {
+  color: #dc2626;
+}
+
+/* Extra Form Fields */
+.extraFieldsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+}
+
+@media (min-width: 600px) {
+  .extraFieldsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formField label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.formField input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.formField input:focus {
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+/* Footer Actions */
+.formFooterActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btnCancelPay {
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnCancelPay:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.btnConfirmPayment {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btnConfirmPayment:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(5, 150, 105, 0.35);
+}
+
+.btnConfirmPayment:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Success Receipt Modal */
+.receiptModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.receiptCard {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25);
+  animation: receiptPop 0.25s ease-out;
+}
+
+@keyframes receiptPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.receiptIconWrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #dcfce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.receiptCard h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.receiptSub {
+  margin: 0 0 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.receiptPaper {
+  background: #f8fafc;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  font-size: 13px;
+}
+
+.paperRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paperRow span {
+  color: #64748b;
+}
+
+.paperRow strong {
+  color: #0f172a;
+}
+
+.qtyHighlight {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+.stockHighlight {
+  color: #059669;
+  font-weight: 800;
+}
+
+.textSuccess {
+  color: #059669;
+  font-size: 15px;
+}
+
+.receiptActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btnPrintReceipt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px;
+  background: #059669;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnPrintReceipt:hover {
+  background: #047857;
+}
+
+.btnGoOrderHistory {
+  padding: 11px;
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnGoOrderHistory:hover {
+  background: #dbeafe;
+}
+
+.btnGoProductList {
+  padding: 9px;
+  background: transparent;
+  color: #64748b;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnGoProductList:hover {
+  color: #0f172a;
+}

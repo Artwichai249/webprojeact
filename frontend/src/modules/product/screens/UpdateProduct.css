@@ -1,0 +1,99 @@
+/* src/screens/UpdateProduct.css */
+.updateProductPage {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.updateProductCard {
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+.updateProductCard h2 {
+  margin: 0 0 20px;
+  color: #334155;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.updateProductForm label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.updateProductForm input,
+.updateProductForm select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.updateProductForm input:focus,
+.updateProductForm select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.updateProductForm input:disabled {
+  background-color: #f1f5f9;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+.updateProductButtonGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.btnSaveUpdateProduct,
+.btnCancelUpdateProduct {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btnSaveUpdateProduct {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btnSaveUpdateProduct:hover {
+  background-color: #1d4ed8;
+}
+
+.btnCancelUpdateProduct {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.btnCancelUpdateProduct:hover {
+  background-color: #e2e8f0;
+}

@@ -1,0 +1,239 @@
+/* src/screens/ProductList.css */
+.productListContainer {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* แถบนำทางด้านบน (สลับระหว่าง สมาชิก <-> สินค้า) */
+.systemNav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.systemNavLink {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: #e2e8f0;
+  color: #475569;
+  transition: all 0.2s;
+}
+
+.systemNavLink:hover {
+  background-color: #cbd5e1;
+}
+
+.systemNavLink.active {
+  background-color: #16a34a;
+  color: white;
+}
+
+/* การ์ดส่วนหัว (สีเขียวอ่อนตามสไลด์หน้า 25) */
+.productHeaderCard {
+  background-color: #dcfce7;
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.productHeaderTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.productHeaderIcon {
+  color: #16a34a;
+}
+
+.productHeaderTitle h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.productHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ช่องค้นหา */
+.productSearchBox {
+  position: relative;
+  min-width: 280px;
+}
+
+.productSearchIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.productSearchBox input {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: white;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.productSearchBox input:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.15);
+}
+
+/* ปุ่มเพิ่มสินค้า */
+.productAddButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #16a34a;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.productAddButton:hover {
+  background-color: #15803d;
+}
+
+/* ตารางแสดงสินค้า */
+.productTableWrapper {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.productTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.productTable th {
+  background-color: #f8fafc;
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.productTable td {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.productTable tr:last-child td {
+  border-bottom: none;
+}
+
+.productTable tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ป้ายสถานะ */
+.productStatusBadge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.productStatusBadge.inStock {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.productStatusBadge.lowStock {
+  background-color: #fef3c7;
+  color: #b45309;
+}
+
+.productStatusBadge.outOfStock {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* ข้อความโหลด / ว่างเปล่า */
+.productLoadingText,
+.productEmptyText {
+  text-align: center;
+  color: #94a3b8;
+  padding: 48px;
+  font-size: 15px;
+}
+
+/* ปุ่มในคอลัมน์จัดการ (แก้ไข / ลบ) */
+.productActionGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btnEditProduct,
+.btnDeleteProduct {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btnEditProduct {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.btnEditProduct:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.btnDeleteProduct {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btnDeleteProduct:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
+}
+
