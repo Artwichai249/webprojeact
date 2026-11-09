@@ -1,5 +1,5 @@
 {
-  "name": "ระบบบริหารจัดการร้านค้าครบวงจร",
+  "name": "ร้านค้าครบวงจร",
   "short_name": "ร้านค้าครบวงจร",
   "description": "ระบบบริหารจัดการร้านค้า สต็อกสินค้า สมาชิก ระบบขายสินค้า (POS) และการเงิน",
   "start_url": "/",
@@ -8,6 +8,18 @@
   "background_color": "#ffffff",
   "theme_color": "#2563eb",
   "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
     {
       "src": "/icon-192.svg",
       "sizes": "192x192",
